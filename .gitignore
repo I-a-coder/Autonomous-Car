@@ -1,0 +1,36 @@
+# ===== ROS 2 build artifacts =====
+build/
+install/
+log/
+
+# ===== Python cache =====
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ===== Colcon =====
+*.log
+*.tmp
+
+# ===== IDEs =====
+.vscode/
+.idea/
+
+# ===== OS files =====
+.DS_Store
+Thumbs.db
+
+# ===== Python virtual environments =====
+venv/
+.env/
+
+# ===== ROS generated files =====
+*.bag
+*.db3
+
+# ===== Core dumps =====
+core
+
+# ===== Jupyter (if used) =====
+.ipynb_checkpoints/
