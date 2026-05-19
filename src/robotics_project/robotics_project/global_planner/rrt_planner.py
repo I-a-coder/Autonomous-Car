@@ -21,7 +21,7 @@ class RRTPlanner(Node):
         
         # Start and goal
         self.start_pos = np.array([0.0, 0.0])
-        self.goal_pos = np.array([3.0, 0.0])
+        self.goal_pos = np.array([20.0, 0.0])
         
         # RRT* parameters (TUNE THESE)
         self.max_iterations = 500
