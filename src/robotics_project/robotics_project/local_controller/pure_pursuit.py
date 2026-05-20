@@ -18,8 +18,8 @@ class PurePursuitController(Node):
     def __init__(self):
         super().__init__('pure_pursuit_controller')
 
-        self.lookahead_distance = 0.4
-        self.max_speed          = 0.2
+        self.lookahead_distance = 1.5
+        self.max_speed          = 0.3
         self.max_angular_vel    = 1.0
         self.goal_tolerance     = 0.2
 

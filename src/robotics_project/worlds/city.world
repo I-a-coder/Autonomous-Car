@@ -304,66 +304,126 @@
         </visual>
       </link>
     </model>
-
-    <!-- Static construction cones on road -->
+    <!-- Random scattered cones -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_1</name>
-      <pose>5 2.5 0 0 0 0</pose>
+      <pose>3.5 1.8 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_2</name>
-      <pose>5 -2.5 0 0 0 0</pose>
+      <pose>6.2 -3.1 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_3</name>
-      <pose>10 2.5 0 0 0 0</pose>
+      <pose>8.7 2.3 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_4</name>
-      <pose>10 -2.5 0 0 0 0</pose>
+      <pose>11.4 -1.7 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_5</name>
-      <pose>16 2.5 0 0 0 0</pose>
+      <pose>14.1 3.4 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_6</name>
+      <pose>17.8 -2.6 0 0 0 0</pose>
+    </include>
+
+    <!-- Random scattered barriers -->
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_1</name>
+      <pose>5.3 -3.8 0 0 0.5 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_2</name>
+      <pose>9.6 3.2 0 0 0 0.8</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_3</name>
+      <pose>12.8 -2.4 0 0 0 0.3</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_4</name>
+      <pose>16.5 1.9 0 0 0 1.2</pose>
+    </include>
+    <!-- Static construction cones on road -->
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_7</name>
+      <pose>5 2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_8</name>
+      <pose>5 -2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_9</name>
+      <pose>10 2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_10</name>
+      <pose>10 -2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_11</name>
+      <pose>16 2.5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <name>cone_12</name>
       <pose>16 -2.5 0 0 0 0</pose>
     </include>
 
     <!-- Jersey barriers -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_1</name>
+      <name>barrier_5</name>
       <pose>7 4 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_2</name>
+      <name>barrier_6</name>
       <pose>7 -4 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_3</name>
+      <name>barrier_7</name>
       <pose>13 4 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_4</name>
+      <name>barrier_8</name>
       <pose>13 -4 0 0 0 0</pose>
     </include>
 
@@ -436,86 +496,8 @@
     </include>
 
     <!-- DYNAMIC obstacle 1 - moves left right across road -->
-    <model name="dynamic_box_1">
-      <pose>8.0 0.0 0.5 0 0 0</pose>
-      <link name="link">
-        <collision name="col">
-          <geometry><box><size>1.0 1.0 1.0</size></box></geometry>
-        </collision>
-        <visual name="vis">
-          <geometry><box><size>1.0 1.0 1.0</size></box></geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>1 0 0 1</diffuse>
-          </material>
-        </visual>
-        <inertial>
-          <mass>1.0</mass>
-          <inertia>
-            <ixx>0.1</ixx><ixy>0</ixy><ixz>0</ixz>
-            <iyy>0.1</iyy><iyz>0</iyz><izz>0.1</izz>
-          </inertia>
-        </inertial>
-      </link>
-      <plugin filename="gz-sim-trajectory-follower-system"
-              name="gz::sim::systems::TrajectoryFollower">
-        <link_name>link</link_name>
-        <loop>true</loop>
-        <waypoint>
-          <time>0</time>
-          <pose>8 -3 0.5 0 0 0</pose>
-        </waypoint>
-        <waypoint>
-          <time>3</time>
-          <pose>8 3 0.5 0 0 0</pose>
-        </waypoint>
-        <waypoint>
-          <time>6</time>
-          <pose>8 -3 0.5 0 0 0</pose>
-        </waypoint>
-      </plugin>
-    </model>
 
     <!-- DYNAMIC obstacle 2 - moves along road direction -->
-    <model name="dynamic_box_2">
-      <pose>14.0 -1.5 0.5 0 0 0</pose>
-      <link name="link">
-        <collision name="col">
-          <geometry><box><size>1.0 1.0 1.0</size></box></geometry>
-        </collision>
-        <visual name="vis">
-          <geometry><box><size>1.0 1.0 1.0</size></box></geometry>
-          <material>
-            <ambient>1 0.5 0 1</ambient>
-            <diffuse>1 0.5 0 1</diffuse>
-          </material>
-        </visual>
-        <inertial>
-          <mass>1.0</mass>
-          <inertia>
-            <ixx>0.1</ixx><ixy>0</ixy><ixz>0</ixz>
-            <iyy>0.1</iyy><iyz>0</iyz><izz>0.1</izz>
-          </inertia>
-        </inertial>
-      </link>
-      <plugin filename="gz-sim-trajectory-follower-system"
-              name="gz::sim::systems::TrajectoryFollower">
-        <link_name>link</link_name>
-        <loop>true</loop>
-        <waypoint>
-          <time>0</time>
-          <pose>14 -3 0.5 0 0 0</pose>
-        </waypoint>
-        <waypoint>
-          <time>4</time>
-          <pose>14 3 0.5 0 0 0</pose>
-        </waypoint>
-        <waypoint>
-          <time>8</time>
-          <pose>14 -3 0.5 0 0 0</pose>
-        </waypoint>
-      </plugin>
-    </model>
 
   </world>
 </sdf>
