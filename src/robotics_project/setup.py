@@ -29,6 +29,7 @@ setup(
             'rrt_planner=robotics_project.global_planner.rrt_planner:main',
             # Member 2 – pure pursuit controller  ← ADD THIS
             'pure_pursuit_controller=robotics_project.local_controller.pure_pursuit:main',
+            'path_visualizer=robotics_project.global_planner.path_visualizer:main',
         ],
     },
 )
