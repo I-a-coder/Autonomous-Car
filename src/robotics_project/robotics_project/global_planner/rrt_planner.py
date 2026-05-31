@@ -17,15 +17,34 @@ class RRTPlanner(Node):
         self.plan_srv = self.create_service(Empty, '/request_replan', self.plan_path_callback)
 
         self.start_pos = np.array([0.0, 0.0])
-        self.goal_pos  = np.array([20.0, 0.0])
+        self.goal_pos  = np.array([30.0, 0.0])
 
-        self.max_iterations   = 2000
-        self.step_size        = 1.0
+        self.max_iterations   = 20000
+        self.step_size        = 4.0
         self.goal_bias        = 0.15
-        self.goal_threshold   = 1.0
+        self.goal_threshold   = 1.5
 
-        self.obstacles = []          # add real obstacle coords here
-        self.obstacle_radius = 1.0
+        # Obstacles from city.world: list of (x, y, radius)
+        self.obstacles = [
+            # Construction cones (small)
+            (4.5, 4.8, 0.5), (5.8, 4.2, 0.5), (7.0, 4.5, 0.5),
+            (11.0, -4.0, 0.5), (1.5, 3.5, 0.5), (17.0, 1.8, 0.5),
+            (20.5, -2.5, 0.5), (24.0, 3.5, 0.5), (26.5, -1.5, 0.5),
+            # Jersey barriers (medium)
+            (1.5, -4.5, 1.0), (12.0, -3.5, 1.0), (18.5, 2.8, 1.0),
+            (23.5, -3.0, 1.0), (27.5, 4.5, 1.0),
+            # Lamp posts (thin)
+            (4, 9.0, 0.4), (10, 9.0, 0.4), (16, 9.0, 0.4),
+            (22, 9.0, 0.4), (28, 9.0, 0.4),
+            (4, -9.0, 0.4), (10, -9.0, 0.4),
+            (14, -8.0, 0.4), (20, -8.0, 0.4), (26, -8.0, 0.4),
+            # Mailboxes (small)
+            (5, 7, 0.4), (12, -7, 0.4), (22, 9.0, 0.4), (27, -7, 0.4),
+            # Buildings (large, off-road but in the map)
+            (4, 12, 3.0), (12, 12, 3.0), (22, 12, 3.0), (32, 12, 3.0),
+            (4, -12, 3.0), (14, -12, 3.0), (24, -12, 3.0), (34, -12, 3.0),
+        ]
+        self.get_logger().info(f'Loaded {len(self.obstacles)} static obstacles')
 
         self.latest_path = None
         self.first_planning_done = False
@@ -34,8 +53,6 @@ class RRTPlanner(Node):
 
         # Wait for subscriber then plan
         self.create_timer(1.0, self.initial_planning)
-        # Republish path every 3s for any late subscribers
-        self.create_timer(3.0, self.republish_path)
 
     def initial_planning(self):
         if self.first_planning_done:
@@ -46,11 +63,6 @@ class RRTPlanner(Node):
             self.get_logger().info('Controller connected! Starting RRT planning...')
             self.plan_path_callback(None, None)
             self.first_planning_done = True
-
-    def republish_path(self):
-        if self.latest_path is not None:
-            self.path_pub.publish(self.latest_path)
-            self.get_logger().info('Path republished', throttle_duration_sec=5.0)
 
     def plan_path_callback(self, request, response):
         self.get_logger().info('=' * 50)
@@ -74,6 +86,10 @@ class RRTPlanner(Node):
             return response
 
     def rrt_star(self):
+        # Direct path is valid — use it (avoids random oscillation)
+        if self.is_collision_free(self.start_pos, self.goal_pos):
+            return [self.start_pos.copy(), self.goal_pos.copy()], True
+
         nodes   = [self.start_pos.copy()]
         parents = [-1]
 
@@ -87,7 +103,7 @@ class RRTPlanner(Node):
             else:
                 sample = np.array([
                     np.random.uniform(self.start_pos[0] - 2, self.goal_pos[0] + 2),
-                    np.random.uniform(-5.0, 5.0)
+                    np.random.uniform(-8.0, 8.0)
                 ])
 
             # Nearest node
@@ -134,13 +150,25 @@ class RRTPlanner(Node):
             path.append(nodes[idx])
             idx = parents[idx]
         path.reverse()
+        # path = self.simplify_path(path)
         return path, True
 
+    def simplify_path(self, path):
+        if len(path) <= 2:
+            return path
+        simplified = [path[0]]
+        for i in range(1, len(path) - 1):
+            if not self.is_collision_free(simplified[-1], path[i + 1]):
+                simplified.append(path[i])
+        simplified.append(path[-1])
+        return simplified
+
     def is_collision_free(self, from_pt, to_pt):
+        clearance = 1.5
         for t in np.linspace(0, 1, 10):
             pt = from_pt + t * (to_pt - from_pt)
-            for obs in self.obstacles:
-                if np.linalg.norm(pt - obs) < self.obstacle_radius:
+            for ox, oy, rad in self.obstacles:
+                if np.linalg.norm(pt - np.array([ox, oy])) < rad + clearance:
                     return False
         return True
 

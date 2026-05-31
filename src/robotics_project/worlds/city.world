@@ -341,58 +341,58 @@
 
     <!-- Construction zone left side of road - workers doing roadwork -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_1</name>
       <pose>4.5 4.8 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_2</name>
       <pose>5.8 4.2 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_3</name>
       <pose>7.0 4.5 0 0 0 0</pose>
     </include>
 
     <!-- Scattered cones right side - like fallen or warning cones -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_4</name>
       <pose>11.0 -4.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_5</name>
       <pose>1.5 3.5 0 0 0 0</pose>
     </include>
 
     <!-- Mid road random single cones -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_6</name>
       <pose>17.0 1.8 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_7</name>
       <pose>20.5 -2.5 0 0 0 0</pose>
     </include>
 
     <!-- Far side scattered cones -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_8</name>
       <pose>24.0 3.5 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_9</name>
       <pose>26.5 -1.5 0 0 0 0</pose>
     </include>
@@ -400,121 +400,121 @@
     <!-- Jersey barriers - like parked construction equipment naturally placed -->
     <!-- Left side near start - like road construction -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_1</name>
       <pose>1.5 -4.5 0 0 0 0.4</pose>
     </include>
 
     <!-- Right side mid - like accident barrier -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_2</name>
       <pose>12.0 -3.5 0 0 0 -0.1</pose>
     </include>
 
     <!-- Left side mid-far - like road divider -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_3</name>
       <pose>18.5 2.8 0 0 0 0.2</pose>
     </include>
 
     <!-- Right side far - like construction zone end -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_4</name>
       <pose>23.5 -3.0 0 0 0 -0.15</pose>
     </include>
 
     <!-- Single barrier near goal left side - like road warning -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_5</name>
-      <pose>27.5 2.5 0 0 0 0.1</pose>
+      <pose>27.5 4.5 0 0 0 0.1</pose>
     </include>
 
     <!-- Lamp posts on sidewalks - evenly spread -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_1</name>
       <pose>4 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_2</name>
       <pose>10 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_3</name>
       <pose>16 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_4</name>
       <pose>22 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_5</name>
       <pose>28 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_6</name>
       <pose>4 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_7</name>
       <pose>10 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_8</name>
       <pose>14 -8.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_9</name>
       <pose>20 -8.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_10</name>
       <pose>26 -8.0 0 0 0 0</pose>
     </include>
 
     <!-- Mailboxes on sidewalks -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_1</name>
       <pose>5 7 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_2</name>
       <pose>12 -7 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_3</name>
       <pose>22 9.0 0 0 0 0</pose>
     </include>
 
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
+      <uri>/home/taab/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_4</name>
       <pose>27 -7 0 0 0 0</pose>
     </include>

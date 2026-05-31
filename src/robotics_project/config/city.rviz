@@ -1,0 +1,42 @@
+Panels:
+  - Class: rviz_common/Displays
+  - Class: rviz_common/Views
+Visualization Manager:
+  Global Options:
+    Fixed Frame: odom
+    Frame Rate: 30
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Plane Cell Count: 50
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Frame Timeout: 15
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Robot Description: robot_description
+    - Class: rviz_default_plugins/Path
+      Name: Planned Path
+      Topic: /planned_path
+      Color: 0 1 0
+      Alpha: 1.0
+      Line Style: Billboards
+      Line Width: 0.2
+    - Class: rviz_default_plugins/MarkerArray
+      Name: Path Markers
+      Topic: /path_markers
+    - Class: rviz_default_plugins/LaserScan
+      Name: Laser Scan
+      Topic: /scan
+      Size: 0.05
+      Style: Points
+      Color: 255 0 0
+    - Class: rviz_default_plugins/Odometry
+      Name: Odometry
+      Topic: /odom
+      Shape: Axes
+      Length: 0.5
+      Radius: 0.05
+  Window Geometry:
+    Width: 1280
+    Height: 720

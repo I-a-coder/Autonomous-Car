@@ -115,19 +115,19 @@ class PathVisualizer(Node):
         goal.header.stamp = stamp
         goal.ns = 'rrt_start_goal'
         goal.id = 1001
-        goal.type = Marker.CYLINDER
+        goal.type = Marker.SPHERE
         goal.action = Marker.ADD
 
         goal.pose.position.x = msg.poses[-1].pose.position.x
         goal.pose.position.y = msg.poses[-1].pose.position.y
-        goal.pose.position.z = 0.5
+        goal.pose.position.z = 0.2
 
-        goal.scale.x = 0.6
-        goal.scale.y = 0.6
+        goal.scale.x = 1.0
+        goal.scale.y = 1.0
         goal.scale.z = 1.0
 
-        goal.color.r = 1.0
-        goal.color.g = 0.0
+        goal.color.r = 0.0
+        goal.color.g = 1.0
         goal.color.b = 0.0
         goal.color.a = 1.0
 

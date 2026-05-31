@@ -500,10 +500,10 @@
       <right_joint>rear_right_wheel_joint</right_joint>
       <wheel_separation>1.75</wheel_separation>
       <wheel_radius>0.31</wheel_radius>
-      <max_linear_velocity>3.0</max_linear_velocity>
-      <max_angular_velocity>0.8</max_angular_velocity>
-      <max_linear_acceleration>0.5</max_linear_acceleration>
-      <min_linear_acceleration>-0.5</min_linear_acceleration>
+      <max_linear_velocity>6.0</max_linear_velocity>
+      <max_angular_velocity>1.0</max_angular_velocity>
+      <max_linear_acceleration>2.0</max_linear_acceleration>
+      <min_linear_acceleration>-2.0</min_linear_acceleration>
       <topic>cmd_vel</topic>
       <odom_topic>odom</odom_topic>
       <frame_id>odom</frame_id>

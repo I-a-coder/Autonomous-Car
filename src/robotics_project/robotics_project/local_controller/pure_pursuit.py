@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import rclpy
 from rclpy.node import Node
-from geometry_msgs.msg import TwistStamped
+from geometry_msgs.msg import Twist
 from nav_msgs.msg import Odometry, Path
 from std_msgs.msg import Float32
 import math
@@ -18,9 +18,9 @@ class PurePursuitController(Node):
     def __init__(self):
         super().__init__('pure_pursuit_controller')
 
-        self.lookahead_distance = 5.0
+        self.lookahead_distance = 15.0
         self.max_speed          = 6.0
-        self.max_angular_vel    = 0.3
+        self.max_angular_vel    = 1.0
         self.goal_tolerance     = 0.2
 
         self.robot_x     = 0.0
@@ -33,7 +33,7 @@ class PurePursuitController(Node):
 
         self.path_sub = self.create_subscription(Path, '/planned_path', self.path_callback, 10)
         self.odom_sub = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
-        self.cmd_pub  = self.create_publisher(TwistStamped, '/cmd_vel', 10)
+        self.cmd_pub  = self.create_publisher(Twist, '/cmd_vel', 10)
         self.error_pub = self.create_publisher(Float32, '/cross_track_error', 10)
 
         self.create_timer(0.1, self.control_loop)
@@ -84,13 +84,17 @@ class PurePursuitController(Node):
 
         L     = self.lookahead_distance
         kappa = (2.0 * e) / (L ** 2)
-        omega = self.max_speed * kappa
+
+        speed = self.max_speed
+        if dist_to_goal < self.lookahead_distance * 2.0:
+            speed *= max(0.3, (dist_to_goal / (self.lookahead_distance * 2.0)) ** 2)
+
+        omega = speed * kappa
         omega = max(-self.max_angular_vel, min(self.max_angular_vel, omega))
 
-        cmd = TwistStamped()
-        cmd.header.stamp    = self.get_clock().now().to_msg()
-        cmd.twist.linear.x  = self.max_speed
-        cmd.twist.angular.z = omega
+        cmd = Twist()
+        cmd.linear.x  = speed
+        cmd.angular.z = omega
         self.cmd_pub.publish(cmd)
 
         cte_msg = Float32()
@@ -126,8 +130,7 @@ class PurePursuitController(Node):
         return poses[-1].pose.position
 
     def stop_robot(self):
-        cmd = TwistStamped()
-        cmd.header.stamp = self.get_clock().now().to_msg()
+        cmd = Twist()
         self.cmd_pub.publish(cmd)
 
 
