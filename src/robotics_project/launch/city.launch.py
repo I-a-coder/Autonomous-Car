@@ -67,11 +67,15 @@ def generate_launch_description():
         package='ros_gz_sim',
         executable='create',
         arguments=[
+            '-world', 'city_world',
             '-name', 'prius',
             '-file', prius_sdf,
             '-x', '0.0',
             '-y', '0.0',
-            '-z', '0.5'
+            '-z', '0.5',
+            '-R', '0',
+            '-P', '0',
+            '-Y', '1.57'
         ],
         output='screen'
     )

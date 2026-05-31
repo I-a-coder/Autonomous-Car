@@ -43,13 +43,13 @@
     <!-- Main road -->
     <model name="road">
       <static>true</static>
-      <pose>10.0 0.0 0.001 0 0 0</pose>
+      <pose>15.0 0.0 0.001 0 0 0</pose>
       <link name="link">
         <collision name="col">
-          <geometry><box><size>30.0 12.0 0.001</size></box></geometry>
+          <geometry><box><size>50.0 12.0 0.001</size></box></geometry>
         </collision>
         <visual name="vis">
-          <geometry><box><size>30.0 12.0 0.001</size></box></geometry>
+          <geometry><box><size>50.0 12.0 0.001</size></box></geometry>
           <material>
             <ambient>0.08 0.08 0.08 1</ambient>
             <diffuse>0.08 0.08 0.08 1</diffuse>
@@ -58,13 +58,13 @@
       </link>
     </model>
 
-    <!-- Road center yellow line -->
+    <!-- Center yellow line -->
     <model name="center_line">
       <static>true</static>
-      <pose>10.0 0.0 0.002 0 0 0</pose>
+      <pose>15.0 0.0 0.002 0 0 0</pose>
       <link name="link">
         <visual name="vis">
-          <geometry><box><size>30.0 0.2 0.001</size></box></geometry>
+          <geometry><box><size>50.0 0.2 0.001</size></box></geometry>
           <material>
             <ambient>1 1 0 1</ambient>
             <diffuse>1 1 0 1</diffuse>
@@ -73,13 +73,13 @@
       </link>
     </model>
 
-    <!-- Road left white line -->
+    <!-- Left white line -->
     <model name="left_line">
       <static>true</static>
-      <pose>10.0 5.5 0.002 0 0 0</pose>
+      <pose>15.0 5.5 0.002 0 0 0</pose>
       <link name="link">
         <visual name="vis">
-          <geometry><box><size>30.0 0.15 0.001</size></box></geometry>
+          <geometry><box><size>50.0 0.15 0.001</size></box></geometry>
           <material>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
@@ -88,13 +88,13 @@
       </link>
     </model>
 
-    <!-- Road right white line -->
+    <!-- Right white line -->
     <model name="right_line">
       <static>true</static>
-      <pose>10.0 -5.5 0.002 0 0 0</pose>
+      <pose>15.0 -5.5 0.002 0 0 0</pose>
       <link name="link">
         <visual name="vis">
-          <geometry><box><size>30.0 0.15 0.001</size></box></geometry>
+          <geometry><box><size>50.0 0.15 0.001</size></box></geometry>
           <material>
             <ambient>1 1 1 1</ambient>
             <diffuse>1 1 1 1</diffuse>
@@ -106,13 +106,13 @@
     <!-- Sidewalk left -->
     <model name="sidewalk_left">
       <static>true</static>
-      <pose>10.0 7.5 0.05 0 0 0</pose>
+      <pose>15.0 7.5 0.05 0 0 0</pose>
       <link name="link">
         <collision name="col">
-          <geometry><box><size>30.0 3.0 0.1</size></box></geometry>
+          <geometry><box><size>50.0 3.0 0.1</size></box></geometry>
         </collision>
         <visual name="vis">
-          <geometry><box><size>30.0 3.0 0.1</size></box></geometry>
+          <geometry><box><size>50.0 3.0 0.1</size></box></geometry>
           <material>
             <ambient>0.6 0.6 0.5 1</ambient>
             <diffuse>0.6 0.6 0.5 1</diffuse>
@@ -124,13 +124,13 @@
     <!-- Sidewalk right -->
     <model name="sidewalk_right">
       <static>true</static>
-      <pose>10.0 -7.5 0.05 0 0 0</pose>
+      <pose>15.0 -7.5 0.05 0 0 0</pose>
       <link name="link">
         <collision name="col">
-          <geometry><box><size>30.0 3.0 0.1</size></box></geometry>
+          <geometry><box><size>50.0 3.0 0.1</size></box></geometry>
         </collision>
         <visual name="vis">
-          <geometry><box><size>30.0 3.0 0.1</size></box></geometry>
+          <geometry><box><size>50.0 3.0 0.1</size></box></geometry>
           <material>
             <ambient>0.6 0.6 0.5 1</ambient>
             <diffuse>0.6 0.6 0.5 1</diffuse>
@@ -176,7 +176,7 @@
 
     <model name="building_3">
       <static>true</static>
-      <pose>20.0 12.0 5.0 0 0 0</pose>
+      <pose>22.0 12.0 5.0 0 0 0</pose>
       <link name="link">
         <collision name="col">
           <geometry><box><size>6.0 4.0 10.0</size></box></geometry>
@@ -191,8 +191,25 @@
       </link>
     </model>
 
-    <!-- Buildings right side -->
     <model name="building_4">
+      <static>true</static>
+      <pose>32.0 12.0 7.0 0 0 0</pose>
+      <link name="link">
+        <collision name="col">
+          <geometry><box><size>6.0 4.0 14.0</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>6.0 4.0 14.0</size></box></geometry>
+          <material>
+            <ambient>0.6 0.2 0.7 1</ambient>
+            <diffuse>0.6 0.2 0.7 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Buildings right side -->
+    <model name="building_5">
       <static>true</static>
       <pose>4.0 -12.0 4.0 0 0 0</pose>
       <link name="link">
@@ -209,7 +226,7 @@
       </link>
     </model>
 
-    <model name="building_5">
+    <model name="building_6">
       <static>true</static>
       <pose>14.0 -12.0 7.0 0 0 0</pose>
       <link name="link">
@@ -226,9 +243,9 @@
       </link>
     </model>
 
-    <model name="building_6">
+    <model name="building_7">
       <static>true</static>
-      <pose>22.0 -12.0 5.0 0 0 0</pose>
+      <pose>24.0 -12.0 5.0 0 0 0</pose>
       <link name="link">
         <collision name="col">
           <geometry><box><size>6.0 4.0 10.0</size></box></geometry>
@@ -243,10 +260,27 @@
       </link>
     </model>
 
-    <!-- GOAL FLAG at (20, 0) - bright green tall pole + red flag -->
+    <model name="building_8">
+      <static>true</static>
+      <pose>34.0 -12.0 6.0 0 0 0</pose>
+      <link name="link">
+        <collision name="col">
+          <geometry><box><size>6.0 4.0 12.0</size></box></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><box><size>6.0 4.0 12.0</size></box></geometry>
+          <material>
+            <ambient>0.2 0.6 0.4 1</ambient>
+            <diffuse>0.2 0.6 0.4 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- GOAL FLAG at (30, 0) -->
     <model name="goal_pole">
       <static>true</static>
-      <pose>20.0 0.0 2.0 0 0 0</pose>
+      <pose>30.0 0.0 2.0 0 0 0</pose>
       <link name="link">
         <collision name="col">
           <geometry><cylinder><radius>0.1</radius><length>4.0</length></cylinder></geometry>
@@ -263,7 +297,7 @@
 
     <model name="goal_flag">
       <static>true</static>
-      <pose>20.3 0.0 3.8 0 0 0</pose>
+      <pose>30.3 0.0 3.8 0 0 0</pose>
       <link name="link">
         <visual name="vis">
           <geometry><box><size>0.8 0.01 0.4</size></box></geometry>
@@ -275,10 +309,9 @@
       </link>
     </model>
 
-    <!-- Bright green goal circle on ground -->
     <model name="goal_marker">
       <static>true</static>
-      <pose>20.0 0.0 0.003 0 0 0</pose>
+      <pose>30.0 0.0 0.003 0 0 0</pose>
       <link name="link">
         <visual name="vis">
           <geometry><cylinder><radius>1.5</radius><length>0.001</length></cylinder></geometry>
@@ -304,200 +337,187 @@
         </visual>
       </link>
     </model>
-    <!-- Random scattered cones -->
+   <!-- Natural city obstacles - scattered realistically -->
+
+    <!-- Construction zone left side of road - workers doing roadwork -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_1</name>
-      <pose>3.5 1.8 0 0 0 0</pose>
+      <pose>4.5 4.8 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_2</name>
-      <pose>6.2 -3.1 0 0 0 0</pose>
+      <pose>5.8 4.2 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_3</name>
-      <pose>8.7 2.3 0 0 0 0</pose>
+      <pose>7.0 4.5 0 0 0 0</pose>
     </include>
 
+    <!-- Scattered cones right side - like fallen or warning cones -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_4</name>
-      <pose>11.4 -1.7 0 0 0 0</pose>
+      <pose>11.0 -4.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_5</name>
-      <pose>14.1 3.4 0 0 0 0</pose>
+      <pose>13.5 -3.2 0 0 0 0</pose>
     </include>
 
+    <!-- Mid road random single cones -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_6</name>
-      <pose>17.8 -2.6 0 0 0 0</pose>
+      <pose>17.0 1.8 0 0 0 0</pose>
     </include>
 
-    <!-- Random scattered barriers -->
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_1</name>
-      <pose>5.3 -3.8 0 0 0.5 0</pose>
-    </include>
-
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_2</name>
-      <pose>9.6 3.2 0 0 0 0.8</pose>
-    </include>
-
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_3</name>
-      <pose>12.8 -2.4 0 0 0 0.3</pose>
-    </include>
-
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_4</name>
-      <pose>16.5 1.9 0 0 0 1.2</pose>
-    </include>
-    <!-- Static construction cones on road -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_7</name>
-      <pose>5 2.5 0 0 0 0</pose>
+      <pose>20.5 -2.5 0 0 0 0</pose>
     </include>
 
+    <!-- Far side scattered cones -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_8</name>
-      <pose>5 -2.5 0 0 0 0</pose>
+      <pose>24.0 3.5 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_9</name>
-      <pose>10 2.5 0 0 0 0</pose>
+      <pose>26.5 -1.5 0 0 0 0</pose>
     </include>
 
+    <!-- Jersey barriers - like parked construction equipment naturally placed -->
+    <!-- Left side near start - like road construction -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
-      <name>cone_10</name>
-      <pose>10 -2.5 0 0 0 0</pose>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_1</name>
+      <pose>6.0 3.8 0 0 0 0.15</pose>
     </include>
 
+    <!-- Right side mid - like accident barrier -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
-      <name>cone_11</name>
-      <pose>16 2.5 0 0 0 0</pose>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_2</name>
+      <pose>12.0 -3.5 0 0 0 -0.1</pose>
     </include>
 
+    <!-- Left side mid-far - like road divider -->
     <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
-      <name>cone_12</name>
-      <pose>16 -2.5 0 0 0 0</pose>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_3</name>
+      <pose>18.5 2.8 0 0 0 0.2</pose>
     </include>
 
-    <!-- Jersey barriers -->
+    <!-- Right side far - like construction zone end -->
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
+      <name>barrier_4</name>
+      <pose>23.5 -3.0 0 0 0 -0.15</pose>
+    </include>
+
+    <!-- Single barrier near goal left side - like road warning -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_5</name>
-      <pose>7 4 0 0 0 0</pose>
+      <pose>27.5 2.5 0 0 0 0.1</pose>
     </include>
 
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_6</name>
-      <pose>7 -4 0 0 0 0</pose>
-    </include>
-
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_7</name>
-      <pose>13 4 0 0 0 0</pose>
-    </include>
-
-    <include>
-      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
-      <name>barrier_8</name>
-      <pose>13 -4 0 0 0 0</pose>
-    </include>
-
-    <!-- Lamp posts on sidewalks -->
+    <!-- Lamp posts on sidewalks - evenly spread -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_1</name>
-      <pose>3 7 0 0 0 0</pose>
+      <pose>4 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_2</name>
-      <pose>8 7 0 0 0 0</pose>
+      <pose>10 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_3</name>
-      <pose>14 7 0 0 0 0</pose>
+      <pose>16 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_4</name>
-      <pose>19 7 0 0 0 0</pose>
+      <pose>22 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_5</name>
-      <pose>3 -7 0 0 0 0</pose>
+      <pose>28 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_6</name>
-      <pose>8 -7 0 0 0 0</pose>
+      <pose>4 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_7</name>
-      <pose>14 -7 0 0 0 0</pose>
+      <pose>10 9.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_8</name>
-      <pose>19 -7 0 0 0 0</pose>
+      <pose>14 -9.0 0 0 0 0</pose>
     </include>
 
-    <!-- Mailboxes on sidewalk -->
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <name>lamp_9</name>
+      <pose>20 -9.0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
+      <name>lamp_10</name>
+      <pose>26 -9.0 0 0 0 0</pose>
+    </include>
+
+    <!-- Mailboxes on sidewalks -->
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_1</name>
-      <pose>6 7 0 0 0 0</pose>
+      <pose>5 7 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_2</name>
-      <pose>11 -7 0 0 0 0</pose>
+      <pose>12 -7 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
       <name>mailbox_3</name>
-      <pose>17 7 0 0 0 0</pose>
+      <pose>22 9.0 0 0 0 0</pose>
     </include>
 
-    <!-- DYNAMIC obstacle 1 - moves left right across road -->
-
-    <!-- DYNAMIC obstacle 2 - moves along road direction -->
+    <include>
+      <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/mailbox/3</uri>
+      <name>mailbox_4</name>
+      <pose>27 -7 0 0 0 0</pose>
+    </include>
 
   </world>
 </sdf>
