@@ -368,7 +368,7 @@
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/construction cone/3</uri>
       <name>cone_5</name>
-      <pose>13.5 -3.2 0 0 0 0</pose>
+      <pose>1.5 3.5 0 0 0 0</pose>
     </include>
 
     <!-- Mid road random single cones -->
@@ -402,7 +402,7 @@
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/jersey barrier/6</uri>
       <name>barrier_1</name>
-      <pose>6.0 3.8 0 0 0 0.15</pose>
+      <pose>1.5 -4.5 0 0 0 0.4</pose>
     </include>
 
     <!-- Right side mid - like accident barrier -->
@@ -479,19 +479,19 @@
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_8</name>
-      <pose>14 -9.0 0 0 0 0</pose>
+      <pose>14 -8.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_9</name>
-      <pose>20 -9.0 0 0 0 0</pose>
+      <pose>20 -8.0 0 0 0 0</pose>
     </include>
 
     <include>
       <uri>/home/vboxuser/.gz/fuel/fuel.gazebosim.org/openrobotics/models/lamp post/3</uri>
       <name>lamp_10</name>
-      <pose>26 -9.0 0 0 0 0</pose>
+      <pose>26 -8.0 0 0 0 0</pose>
     </include>
 
     <!-- Mailboxes on sidewalks -->
